@@ -30,7 +30,7 @@ Interesting! Even though our data sample size wasn't massive we can already see 
 
 This code uses python3's new asyncio features; *You must run this code with python 3.5+!*
 
-Feel free to toggle the `NUM_ITERATIONS` split sizes, and `VERBOSE` variables to get your own experiment going :) Don't forget to install aiohttp
+Feel free to toggle the ```NUM_ITERATIONS``` split sizes, and ```VERBOSE``` variables to get your own experiment going :) Don't forget to install aiohttp
 
 .. code-block:: pycon
 

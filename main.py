@@ -89,8 +89,9 @@ async def download_many(url, splits):
 
 
 if __name__ == '__main__':
-    # This is a large (almost 5MB) image
-    url = 'http://northwestcoast.ca/wp-content/uploads/2014/07/Matier-and-Stonecrop-Glacier-Joffre-Provincial-Park-large.jpg'
+    # This is a large (almost 11MB) image
+    url = 'http://northwestcoast.ca/wp-content/uploads/2014/07/' \
+          'Matier-and-Stonecrop-Glacier-Joffre-Provincial-Park-large.jpg'
 
     splits = [1, 4, 10, 16, 25, 50, 100]
 
