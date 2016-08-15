@@ -5,18 +5,20 @@ Is it more efficient to download a huge file, say an image, in one request?  Or 
 
 **Results**:
 
-I ran the code myself with 10 iterations on [this 10MB web resource](https://upload.wikimedia.org/wikipedia/commons/5/56/The_Very_Large_Array%2C_New_Mexico.jpg) testing split sizes
-1, 4, 10, 16, 25, 50, 100, 200 and found that:
-```
-200 request splits resulted in average 5.8094 sec over 10 iterations ; 55,437 bytes per split
-100 request splits resulted in average 5.9908 sec over 10 iterations ; 110,875 bytes per split
-50 request splits resulted in average 6.5629 sec over 10 iterations ; 221,750 bytes per split
-25 request splits resulted in average 7.2891 sec over 10 iterations ; 443,500 bytes per split
-16 request splits resulted in average 8.1770 sec over 10 iterations ; 692,969 bytes per split
-10 request splits resulted in average 8.6593 sec over 10 iterations ; 1,108,751 bytes per split
-4 request splits resulted in average 11.6698 sec over 10 iterations ; 2,771,878 bytes per split
-1 request splits resulted in average 14.7066 sec over 10 iterations ; 11,087,513 bytes per split
-```
+I ran the code myself with 10 iterations on a 10MB image and tested the split sizes
+`1, 4, 10, 16, 25, 50, 100, 200` and found that:
+
+.. code-block:: pycon
+
+    200 request splits resulted in average 5.8094 sec over 10 iterations ; 55,437 bytes per split
+    100 request splits resulted in average 5.9908 sec over 10 iterations ; 110,875 bytes per split
+    50 request splits resulted in average 6.5629 sec over 10 iterations ; 221,750 bytes per split
+    25 request splits resulted in average 7.2891 sec over 10 iterations ; 443,500 bytes per split
+    16 request splits resulted in average 8.1770 sec over 10 iterations ; 692,969 bytes per split
+    10 request splits resulted in average 8.6593 sec over 10 iterations ; 1,108,751 bytes per split
+    4 request splits resulted in average 11.6698 sec over 10 iterations ; 2,771,878 bytes per split
+    1 request splits resulted in average 14.7066 sec over 10 iterations ; 11,087,513 bytes per split
+
 
 Interesting! Even though our data sample size wasn't massive we can already see patterns:
 - More splits --> smaller payload per request --> faster concurrent downloading via asyncio
