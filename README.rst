@@ -21,14 +21,16 @@ I ran the code myself with 10 iterations on a 10MB image and tested the split si
 
 
 Interesting! Even though our data sample size wasn't massive we can already see patterns:
+
 - More splits --> smaller payload per request --> faster concurrent downloading via asyncio
-- Going from 100 -> 200 splits seemed to have largely depreciating returns in latency! Thus, 110KB -> 55KB per request isn't that big of a saving (200ms) and perhaps the sweet spot is somewhere neat 50kb per request.
+- Going from 100 -> 200 splits seemed to have largely depreciating returns in latency!
+  - Thus, 110KB -> 55KB per request isn't that big of a saving (200ms) and perhaps the sweet spot is somewhere neat 50kb per request.
 
 **Try it yourself**:
 
 This code uses python3's new asyncio features; *You must run this code with python 3.5+!*
 
-Feel free to toggle the `` split sizes, and `` variables to get your own experiment going :) Don't forget to install aiohttp
+Feel free to toggle the `NUM_ITERATIONS` split sizes, and `VERBOSE` variables to get your own experiment going :) Don't forget to install aiohttp
 
 .. code-block:: pycon
 
@@ -55,4 +57,5 @@ Feel free to toggle the `` split sizes, and `` variables to get your own experim
    - You might get rate limited depending on the site hosting the url
 
 By Lucas Ou-Yang, *lucasyangpersonal@gmail.com*
+
 http://codelucas.com
