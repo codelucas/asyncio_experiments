@@ -27,16 +27,19 @@ Interesting! Even though our data sample size wasn't massive we can already see 
 **Try it yourself**:
 
 This code uses python3's new asyncio features; *You must run this code with python 3.5+!*
+
 Feel free to toggle the `` split sizes, and `` variables to get your own experiment going :) Don't forget to install aiohttp
-```
-virtualenv asyncio-experiments
-cd asyncio-experiments
-source bin/activate
-git clone https://github.com/codelucas/asyncio_experiments.git
-cd asyncio_experiments
-pip3 install aiohttp
-python3.5 main.py
-```
+
+.. code-block:: pycon
+
+    virtualenv asyncio-experiments
+    cd asyncio-experiments
+    source bin/activate
+    git clone https://github.com/codelucas/asyncio_experiments.git
+    cd asyncio_experiments
+    pip3 install aiohttp
+    python3.5 main.py
+
 
 **Caveats**:
 
@@ -51,4 +54,5 @@ python3.5 main.py
    - Try using this api to just target big websites that can probably handle the load
    - You might get rate limited depending on the site hosting the url
 
-- By Lucas Ou-Yang, *lucasyangpersonal@gmail.com*
+By Lucas Ou-Yang, *lucasyangpersonal@gmail.com*
+http://codelucas.com
